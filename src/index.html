@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" lang="en">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"
+                        style="margin-left: 10px; margin-right:10px;">Search</button>
+                </form>
+                <button type="button" class="btn btn-outline-primary" style="margin: 10px;">Sign in</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+
+    <!-- 参考网站：https://www.rottentomatoes.com/ : http://www.mtime.com/ : https://www.imdb.com/-->
+
+    <!-- part 1: 完成这个模块，同时找五张高清图片，放到carousel里面去 -->
+    <div class="container">
+        <h1>Hot movies</h1>
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- part 2: 放一些即将上映的电影block-->
+    <div class="container">
+        <h1>Upcoming</h1>
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- part 3: 参考 http://www.mtime.com/ 目前只做homepage，不需要跳转链接 -->
+    <div class="container">
+        <div>
+            <h1>Reviews</h1>
+        </div>
+    </div>
+    
+    <!-- part 4: 自由想象 -->
+    <div class="container">
+        <div>
+            <h1>More to Explore</h1>
+        </div>
+    </div>
+
+    <!-- part 5：设计网站底部信息，包括如 help, contact us, license, feedback等等信息，参考其他网站；整体网站审稿修改美化 -->
+    <div class="container">
+        <div>
+            <h1>Contact US</h1>
+        </div>
+    </div>
+
+    <script src="javascript/main.js"></script>
+</body>
