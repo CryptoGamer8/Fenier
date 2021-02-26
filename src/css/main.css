@@ -74,3 +74,8 @@ img {
     width: 80%;
     height: 4rem;
 }
+
+.col-md-3:hover .overlay {
+            opacity: 1;
+        }
+
