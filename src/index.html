@@ -6,6 +6,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
+  
+    <script src="https://kit.fontawesome.com/90b862c373.js" crossorigin="anonymous"></script>
+    
+    <style>
+    .carousel-inner img {
+      margin: auto;
+    }
+    </style>
+
 	
     <link href="css/main.css" rel="stylesheet">
 	<style>
@@ -62,20 +71,28 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="d-block w-100" alt="...">
+                <img src="resources/imgs/monsterhunterC.jfif" class="d-block w-75" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="d-block w-100" alt="...">
+                <img src="resources/imgs/tomangjerryC.jfif" class="d-block w-75" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="d-block w-100" alt="...">
+                <img src="resources/imgs/judas.jpg" class="d-block w-75" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="resources/imgs/TWC-Mobile-2.jpg" class="d-block w-75" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="resources/imgs/croods-2.jpg" class="d-block w-75" alt="...">
             </div>
         </div>
+        
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
+        
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -84,46 +101,74 @@
     </div>
     <br>
 
-    <!-- ²Î¿¼ÍøÕ¾£ºhttps://www.rottentomatoes.com/ : http://www.mtime.com/ : https://www.imdb.com/-->
+    <!-- å‚è€ƒç½‘ç«™ï¼šhttps://www.rottentomatoes.com/ : http://www.mtime.com/ : https://www.imdb.com/-->
 
-    <!-- part 1: Íê³ÉÕâ¸öÄ£¿é£¬Í¬Ê±ÕÒÎåÕÅ¸ßÇåÍ¼Æ¬£¬·Åµ½carouselÀïÃæÈ¥ -->
+    <!-- part 1: å®Œæˆè¿™ä¸ªæ¨¡å—ï¼ŒåŒæ—¶æ‰¾äº”å¼ é«˜æ¸…å›¾ç‰‡ï¼Œæ”¾åˆ°carouselé‡Œé¢åŽ» -->
     <div class="container">
         <h1>Hot movies</h1>
-        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-            <div class="col">
-                <div class="p-3 border bg-light">Row column</div>
+         <div class="row justify-content-center">
+             
+            <div class="card movie_card">
+                <img src="resources/imgs/croods.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer"></i>
+                    <h5 class="card_title">The Croods: A New Age</h5>
+                    <span class="movie_info_pg float-end"> PG</span><br><br><br>
+                    <span class="movie_info">2021</span>
+                    <span class="movie_info float-end"><i class="fas fa-star"></i> 7 / 10</span>
+                </div>
             </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Row column</div>
+            
+            <div class="card movie_card">
+                <img src="resources/imgs/judas.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer"></i>
+                    <h5 class="card_title">Judas and the Black Messiah</h5>
+                    <span class="movie_info_pg float-end"> R </span><br><br>
+                    <span class="movie_info">2021</span>
+                    <span class="movie_info float-end"><i class="fas fa-star"></i> 7.7 / 10</span>
+                </div>
             </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Row column</div>
+
+        
+            <div class="card movie_card">
+                <img src="resources/imgs/thelittlethings.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer">
+                    </i>
+                    <h5 class="card_title">The Little Things</h5>
+                    <span class="movie_info_pg float-end"> R </span><br><br><br>
+                    <span class="movie_info">2021</span>
+                    <span class="movie_info float-end"><i class="fas fa-star"></i> 6.3 / 10</span>
+                </div>
             </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Row column</div>
+            
+        
+            <div class="card movie_card">
+                <img src="resources/imgs/tomangjerry.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer"></i>
+                    <h5 class="card_title">Tom & Jerry: The Movie</h5>
+                    <span class="movie_info_pg float-end"> PG </span><br><br><br>
+                    <span class="movie_info">2021</span>
+                    <span class="movie_info float-end"><i class="fas fa-star"></i> 6.6 / 10</span>
+                </div>
             </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Row column</div>
-            </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Row column</div>
-            </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Row column</div>
-            </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Row column</div>
-            </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Row column</div>
-            </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Row column</div>
+             
+            <div class="card movie_card">
+                <img src="resources/imgs/monsterhunter.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer"></i>
+                    <h5 class="card_title">Monster Hunter</h5>
+                    <span class="movie_info_pg float-end"> PG13</span><br><br>
+                    <span class="movie_info">2020</span>
+                    <span class="movie_info float-end"><i class="fas fa-star"></i> 5.3 / 10</span>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- part 2: ·ÅÒ»Ð©¼´½«ÉÏÓ³µÄµçÓ°block-->
+    <!-- part 2: æ”¾ä¸€äº›å³å°†ä¸Šæ˜ çš„ç”µå½±block-->
     <div class="container">
         <h1>Upcoming</h1>
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
@@ -160,7 +205,7 @@
         </div>
     </div>
 
-    <!-- part 3: ²Î¿¼ http://www.mtime.com/ Ä¿Ç°Ö»×öhomepage£¬²»ÐèÒªÌø×ªÁ´½Ó -->
+    <!-- part 3: å‚è€ƒ http://www.mtime.com/ ç›®å‰åªåšhomepageï¼Œä¸éœ€è¦è·³è½¬é“¾æŽ¥ -->
     <section>
         <div class="container" style="padding-top:100px;">
             <div class="row mb-3 pb-1">
@@ -217,14 +262,14 @@
         </div>
     </section><br>
     
-    <!-- part 4: ×ÔÓÉÏëÏó -->
+    <!-- part 4: è‡ªç”±æƒ³è±¡ -->
     <div class="container">
         <div>
             <h1>More to Explore</h1>
         </div>
     </div>
 
-    <!-- part 5£ºÉè¼ÆÍøÕ¾µ×²¿ÐÅÏ¢£¬°üÀ¨Èç help, contact us, license, feedbackµÈµÈÐÅÏ¢£¬²Î¿¼ÆäËûÍøÕ¾£»ÕûÌåÍøÕ¾Éó¸åÐÞ¸ÄÃÀ»¯ -->
+    <!-- part 5ï¼šè®¾è®¡ç½‘ç«™åº•éƒ¨ä¿¡æ¯ï¼ŒåŒ…æ‹¬å¦‚ help, contact us, license, feedbackç­‰ç­‰ä¿¡æ¯ï¼Œå‚è€ƒå…¶ä»–ç½‘ç«™ï¼›æ•´ä½“ç½‘ç«™å®¡ç¨¿ä¿®æ”¹ç¾ŽåŒ– -->
     <div class="container">
         <div>
             <h1>Contact US</h1>
