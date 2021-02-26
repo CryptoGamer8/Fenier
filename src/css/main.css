@@ -1,3 +1,74 @@
 .col-md-3:hover .overlay {
             opacity: 1;
         }
+
+
+/* Footer */
+.footer {
+    position: relative;
+    background-color:white;
+    color: #707070;
+    padding: 55px 0 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer h5 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    color: #707070;
+    position: relative;
+    padding-bottom: 16px;
+}
+.footer h5:after {
+    content: '';
+    display: block;
+    margin: 5px 0 0;
+    width: 40%;
+    height: 1px;
+    background-color: #fff;
+}
+.footer ul {
+    list-style: none;
+    line-height: 2.2em;
+    padding-left:0px;
+}
+.footer ul a {
+    color:#707070;
+}
+.footer ul a:hover {
+    color:#274abb;
+    text-decoration:none;
+}
+/*footer bottom */
+.footer-bottom {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-top: 1px solid rgba(0,0,0,0.09);
+    background: #fff;
+    
+}
+.copyright-text p {
+    color: #707070;
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-size:12px;
+}
+
+/* Social Icons */
+.socialicon button{
+    border: #fff;
+    justify-content:space-between;
+    background-color: #fff;
+}
+
+.container {
+    margin-top: 50px;
+}
+.socialicon{
+    padding: 0;
+    margin: 0;
+}
+.socialicon button:hover{
+    border: 0;
+}
