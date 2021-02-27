@@ -8,18 +8,19 @@
     </script>
     <script src="https://kit.fontawesome.com/90b862c373.js" crossorigin="anonymous"></script>
     <link href="css/main.css" rel="stylesheet">
-
+    <title>Fenier</title>
     <style>
     .carousel-inner img {
       margin: auto;
     }
+  
     </style>	
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container-fluid" style="background-color: rgb(182, 93, 93);">
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -28,28 +29,21 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#hotMovies">Hot Movies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <a class="nav-link" href="#upcoming">Upcoming</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="#reviews">Reviews</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#moreToExplore">More To Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactUs">Contact Us</a>
+                    </li>
+                    
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -62,7 +56,7 @@
     </nav>
 
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="background-color: black;">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="resources/imgs/xingD/monsterhunterC.jfif" class="d-block w-75" alt="...">
@@ -97,11 +91,10 @@
 
     <!-- part1: https://www.rottentomatoes.com/ : http://www.mtime.com/ : https://www.imdb.com/-->
 
-    <div class="container">
-        <h1>Hot movies</h1>
-         <div class="row justify-content-center">
-             
-            <div class="card movie_card">
+    <div class="container" id="hotMovies">
+        <h1 class="vintage">Hot Movies</h1>
+         <div class="row justify-content-center" style="float:left;">
+            <div class="card movie_card" style="margin:40px;">
                 <img src="resources/imgs/xingD/croods.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer"></i>
@@ -112,7 +105,7 @@
                 </div>
             </div>
             
-            <div class="card movie_card">
+            <div class="card movie_card" style="margin:40px;">
                 <img src="resources/imgs/xingD/judas.jfif" class="card-img-top" alt="...">
                 <div class="card-body">
                     <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer"></i>
@@ -124,7 +117,7 @@
             </div>
 
         
-            <div class="card movie_card">
+            <div class="card movie_card" style="margin:40px;">
                 <img src="resources/imgs/xingD/thelittlethings.jfif" class="card-img-top" alt="...">
                 <div class="card-body">
                     <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer">
@@ -137,7 +130,7 @@
             </div>
             
         
-            <div class="card movie_card">
+            <div class="card movie_card" style="margin:40px;">
                 <img src="resources/imgs/xingD/tomangjerry.jfif" class="card-img-top" alt="...">
                 <div class="card-body">
                     <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer"></i>
@@ -148,7 +141,7 @@
                 </div>
             </div>
              
-            <div class="card movie_card">
+            <!-- <div class="card movie_card">
                 <img src="resources/imgs/xingD/monsterhunter.jfif" class="card-img-top" alt="...">
                 <div class="card-body">
                     <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer"></i>
@@ -157,41 +150,43 @@
                     <span class="movie_info">2020</span>
                     <span class="movie_info float-end"><i class="fas fa-star"></i> 5.3 / 10</span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
+    <div style="clear: both;"></div>
 
     <!-- part 2: 放一些即将上映的电影block-->
-    <div class="container" class="container" style="padding-top: 100px;">
-        <h1>Upcoming</h1>
+    <div class="container" id="upcoming" style="padding-top: 100px;">
+        <h1 class="vintage">Upcoming</h1>
+        <br>
         <div class="row">
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem; height: 50rem;">
                     <img src="resources/imgs/jiaqi/11.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Crisis</h5>
-                        <p class="card-text">Three stories about the world of opioids collide: a drug trafficker arranges a multi-cartel Fentanyl smuggling operation between Canada and the U.S., an architect recovering from an OxyContin addiction tracks down the truth behind her son's involvement with narcotics, and a university professor battles unexpected revelations about his research employer, a drug company with deep government influence bringing a new "non-addictive" painkiller to market.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Three stories about the world of opioids collide: a drug trafficker arranges a multi-cartel Fentanyl smuggling operation between Canada and the U.S., an architect recovering from an OxyContin addiction tracks down the truth behind her son's involvement with narcotics.</p>
+                        <a href="#" class="btn btn-primary" style="position: absolute; bottom: 2rem; left:25%">Go somewhere</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem; height: 50rem;">
                     <img src="resources/imgs/jiaqi/12.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Night of the Kinds</h5>
                         <p class="card-text">A young man is sent to "La Maca", a prison of Ivory Coast in the middle of the forest ruled by its prisoners. With the red moon rising, he is designated by the Boss to be the new "Roman" and must tell a story to the other prisoners.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary" style="position: absolute; bottom: 2rem; left:25%">Go somewhere</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem; height: 50rem;">
                     <img src="resources/imgs/jiaqi/13.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Cherry</h5>
                         <p class="card-text">An Army medic suffering from post-traumatic stress disorder becomes a serial bank robber after an addiction to drugs puts him in debt.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary" style="position: absolute; bottom: 2rem; left:25%">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -200,10 +195,10 @@
 
     <!-- part 3:  http://www.mtime.com/ Reviews -->
     <section>
-        <div class="container" style="padding-top:100px;">
+        <div class="container" style="padding-top:100px;" id="reviews">
             <div class="row mb-3 pb-1">
                 <div class="col-md-8">
-                    <h1 class="mb-4">Reviews</h1>
+                    <h1 class="vintage">Reviews</h1>
                     <p>Check out what movie critics and super fans have to say about the popular movies.  <button type="button" class="btn btn-outline-success" style="margin-left: 1008px; margin-right:10px;">Explore></button></p>			
                 </div>
             
@@ -215,7 +210,7 @@
                             <p class="text text-lg-center">1991 Crime,Thriller<span class="badge bg-success">8.9</span></p>
                             <p class="card-text text-lg-center">"Without unduly spoiling the script, if you have not seen it yet, by the greatest fluke: a psychopath known as the Buffalo Bill......"</p>
                             <p class="card-text text-sm-right">-by FrenchEddieFelson</p><br><br>
-							<a href="#" class="btn btn-outline-success">View More</a>
+							<a href="#" class="btn btn-outline-success" style="position: absolute; bottom: 2rem;">View More</a>
                         </div>
                     </div>
                     <div class="col-md-3 align-self-stretch p-4 card">
@@ -225,7 +220,7 @@
                             <p class="text-lg-center">2016 Comedy,Music<span class="badge bg-success">9.1</span></p>
                             <p class="card-text text-lg-center">"This film has a surreal, dream like feeling that persists throughout the movie from the opening dance number to articular shines, where......"</p>
                             <p class="card-text text-sm-right">-by pcrprimer</p><br>
-							<a href="#" class="btn btn-outline-success">View More</a>
+							<a href="#" class="btn btn-outline-success" style="position: absolute; bottom: 2rem;">View More</a>
                         </div>
                     </div>
                     <div class="col-md-3 align-self-stretch p-4 card">
@@ -235,7 +230,7 @@
                             <p class="text-lg-center">2019 Action<span class="badge bg-success">8.7</span></p>
                             <p class="card-text text-lg-center">"The crowd applauded 3 times during the movie, and stood up to clap their hands after. This I have never witnessed in a Dutch cinema. Dutch crowds aren't usually passionate......"</p>
                             <p class="card-text text-sm-right">-by larshoeijmans</p>
-							<a href="#" class="btn btn-outline-success">View More</a>
+							<a href="#" class="btn btn-outline-success" style="position: absolute; bottom: 2rem;">View More</a>
                         </div>
                     </div>
                     <div class="col-md-3 align-self-stretch p-4 card">
@@ -245,7 +240,7 @@
                             <p class="text-lg-center">2021 Comedy,Drama<span class="badge bg-success">8.5</span></p>
                             <p class="card-text text-lg-center">"Jia Ling adapted the film from her mother's true story. The unexpected death of her mother when she was 19 was a great blow to her. The film carries her endless......"</p>
                             <p class="card-text text-sm-right">-by cici</p>
-							<a href="#" class="btn btn-outline-success">View More</a>
+							<a href="#" class="btn btn-outline-success" style="position: absolute; bottom: 2rem;">View More</a>
                         </div>
                     </div>
                 </div>
@@ -253,16 +248,16 @@
     </section><br>
     
     <!-- part 4: imagine yourself -->
-    <div class="container">
+    <div class="container" id="moreToExplore">
         <div>
-            <h1>More to Explore</h1>
+            <h1 class="vintage">More to Explore</h1>
         </div>
     </div>
 
     <!-- part 5：设计网站底部信息，包括如 help, contact us, license, feedback等等信息，参考其他网站；整体网站审稿修改美化 -->
-    <div class="container">
+    <div class="container" id="contactUs">
         <div>
-            <h1>Contact US</h1>
+            <h1 class="vintage">Contact</h1>
             <div class="footer-section">
                 <div class="footer">
                     <div class="col-md-4 footer-one">
@@ -320,6 +315,6 @@
             </div>  
         </div>
     </div>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+    <button onclick="topFunction()" id="backToTop" title="Go to top">Back to Top</button>
     <script src="javascript/main.js"></script>
 </body>
