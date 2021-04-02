@@ -1,1 +1,5 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'users/index.css' %}">
+
 <h1>Hello Users</h1>
+<a href="{% url 'homepage:index' %}"><p>homepage</p></a>
