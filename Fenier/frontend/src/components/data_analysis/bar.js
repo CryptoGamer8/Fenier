@@ -27,7 +27,7 @@ class BarChart extends Component {
 				{id: 10752,name: "War", total_num: 0},
 				{id: 37,name: "Western", total_num: 0}
 			],
-			year : 2020,
+			year : 2019,
 			apiKey : "002f58f23a005b82c32d167ba7872e11",
 			dataPoints: [
 				{label: "Action", y: 0},
@@ -112,7 +112,7 @@ class BarChart extends Component {
 			animationEnabled: true,
 			theme: "light2",
 			title:{
-				text: "All Movies Relaesed in 2020 Sorted by Genre"
+				text: "All Movies Relaesed Sorted by Genre"
 			},
 			axisX: {
 				title: "Movie Genre",
@@ -139,7 +139,7 @@ class BarChart extends Component {
 					 onRef={ref => this.chart = ref}
 				/>
 
-            {/*<p>{this.state.year}</p>*/}
+            <p>Year : {this.state.year}</p>
 			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
 		</div>
 		);
