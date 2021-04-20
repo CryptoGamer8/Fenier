@@ -41,7 +41,7 @@
     background-color: #000;
 } 
 .swiper-container img {
-  max-height: 469px;
+  width: 75%;
   display: block;
   margin: 0 auto;
 }
