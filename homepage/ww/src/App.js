@@ -1,111 +1,169 @@
-
-
 import React from 'react';
+import banner1 from './assets/imgs/xingD/monsterhunterC.jfif';
+import banner2 from './assets/imgs/xingD/tomangjerryC.jfif';
+import banner3 from './assets/imgs/xingD/judas.jpg';
+import banner4 from './assets/imgs/xingD/TWC-Mobile-2.jpg';
+import banner5 from './assets/imgs/xingD/croods-2.jpg';
+
 import './App.css';
 import Header from './view/header/index'
 
 function initSwiper() {
   var mySwiper = new window.Swiper('.swiper-container', {
-    direction: 'horizontal', 
-    loop: true, 
+    direction: 'horizontal', // 垂直切换选项
+    loop: true, // 循环模式选项
 
-  
+    // 如果需要分页器
     pagination: {
       el: '.swiper-pagination',
     },
 
- 
+    // 如果需要前进后退按钮
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
 
-
+    // 如果需要滚动条
     scrollbar: {
       el: '.swiper-scrollbar',
     },
   })
-
 }
 export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      bannerList: [],
+      bannerList: [
+        banner1, banner2, banner3, banner4, banner5
+      ],
       parts: [
         {
           label: 'Hot Movies',
           id: 'hotMovies',
-          list: []
+          list: [
+            {
+              coverImg: require('./assets/imgs/xingD/croods.jpg').default,
+              name: 'The Croods: A New Age',
+              label: 'PG',
+              rate: '7',
+              date: '2021'
+            },
+            {
+              coverImg: require('./assets/imgs/xingD/judas.jfif').default,
+              name: 'Judas and the Black Messiah',
+              label: 'R',
+              rate: '7.7',
+              date: '2021'
+            }, {
+              coverImg: require('./assets/imgs/xingD/thelittlethings.jfif').default,
+              name: 'The Little Things',
+              label: 'R',
+              rate: '6.3',
+              date: '2021'
+            }, {
+              coverImg: require('./assets/imgs/xingD/tomangjerry.jfif').default,
+              name: 'Tom & Jerry: The Movie',
+              label: 'PG',
+              rate: '6.6',
+              date: '2021'
+            }
+          ]
         },
         {
           label: 'Upcoming',
           id: 'upcoming',
-          list: []
+          list: [
+            {
+              coverImg: require('./assets/imgs/jiaqi/11.jpg').default,
+              name: 'Crisis',
+              label: `Three stories about the world of opioids collide: a drug trafficker arranges a multi-cartel Fentanyl smuggling operation between Canada and the U.S., an architect recovering from an OxyContin addiction tracks down the truth behind her son's involvement with narcotics.`,
+              rate: '7.9'
+            },
+            {
+              coverImg: require('./assets/imgs/jiaqi/12.jpg').default,
+              name: 'Night of the Kinds',
+              label: `A young man is sent to "La Maca", a prison of Ivory Coast in the middle of the forest ruled by its prisoners. With the red moon rising, he is designated by the Boss to be the new "Roman" and must tell a story to the other prisoners.`,
+              rate: '8.9'
+            }, {
+              coverImg: require('./assets/imgs/jiaqi/13.jpg').default,
+              name: 'Cherry',
+              label: `An Army medic suffering from post-traumatic stress disorder becomes a serial bank robber after an addiction to drugs puts him in debt.`,
+              rate: '6.8'
+            },
+          ]
         },
         {
           label: 'Reviews',
           id: 'reviews',
-          list: []
+          list: [
+            {
+              coverImg: require('./assets/imgs/jialin/movie_1.jpg').default,
+              name: 'The Silence of The Lamb',
+              label: `"Without unduly spoiling the script, if you have not seen it yet, by the greatest fluke: a psychopath known as the Buffalo Bill......"
+
+              -by FrenchEddieFelson`,
+              rate: '8.9'
+            },
+            {
+              coverImg: require('./assets/imgs/jialin/movie_4.jpg').default,
+              name: 'La La Land',
+              label: `"This film has a surreal, dream like feeling that persists throughout the movie from the opening dance number to articular shines, where......"
+
+              -by pcrprimer`,
+              rate: '9.1'
+            }, {
+              coverImg: require('./assets/imgs/jialin/movie_3.jpg').default,
+              name: 'Avengers: Endgame',
+              label: `"The crowd applauded 3 times during the movie, and stood up to clap their hands after. This I have never witnessed in a Dutch cinema. Dutch crowds aren't usually passionate......"
+
+              -by larshoeijmans`,
+              rate: '8.7'
+            }, {
+              coverImg: require('./assets/imgs/jialin/movie_2.jpg').default,
+              name: 'Hi Mom',
+              label: `"Jia Ling adapted the film from her mother's true story. The unexpected death of her mother when she was 19 was a great blow to her. The film carries her endless......"
+
+              -by cici`,
+              rate: '8.5'
+            }
+          ]
         },
         {
           label: 'More to Explore',
           id: 'moreToExplore',
-          list: []
+          list: [
+            {
+              coverImg: require('./assets/imgs/jingyiLi/ItalianClassics.jpg').default,
+              name: 'Italian Classics',
+              label: `
+                Classic films by Federico Fellini, Michelangelo Antonioni and else...
+            `,
+              date: '1960-1980'
+            },
+            {
+              coverImg: require('./assets/imgs/jingyiLi/JapanessClassics.jpg').default,
+              name: 'Japaness Classics',
+              label: `
+                Akira Kurosawa and Toshiro Mifune's wonderful collaboration.
+            `,
+              date: '1940-1990'
+            },
+            {
+              coverImg: require('./assets/imgs/jingyiLi/SwedenClassics.webp').default,
+              name: 'Sweden Classics',
+              label: `
+                Ingmar Bergman's great movies with magical unique touches.
+            `,
+              date: '1950-1980'
+            }
+          ]
         }
       ]
     }
-    this.getMovies = this.getMovies.bind(this)
   }
   componentDidMount() {
-    this.getMovies()
-  }
-  getMovies() {
-    fetch('http://www.omdbapi.com/?s=star+wars&page=1&apikey=20c592d9')
-    .then(res => res.json())
-    .then(r => {
-      console.log(r.Search)
-      this.setState({
-        bannerList: (r.Search.slice(0,3)).map(item => item.Poster)
-      })
-      let obj = {
-        label: 'Hot Movies',
-          id: 'hotMovies',
-          list: r.Search.slice(3,7)
-      }
-      let obj2 = {
-        label: 'Upcoming',
-        id: 'upcoming',
-        list: r.Search.slice(7,10)
-      }
-      let arr = this.state.parts.slice(0)
-      arr[0] = obj
-      arr[1] = obj2
-      this.setState({
-        parts: arr
-      })
-      initSwiper()
-    })
-    fetch('http://www.omdbapi.com/?s=star+wars&page=2&apikey=20c592d9')
-    .then(res => res.json())
-    .then(r => {
-      let obj = {
-        label: 'Reviews',
-          id: 'reviews',
-          list: r.Search.slice(0,4)
-      }
-      let obj2 = {
-        label: 'More to Explore',
-        id: 'moreToExplore',
-        list: r.Search.slice(4,7)
-      }
-      let arr = this.state.parts.slice(0)
-      arr[2] = obj
-      arr[3] = obj2
-      this.setState({
-        parts: arr
-      })
-    })
+    initSwiper()
   }
   render() {
     const { bannerList, parts } = this.state
@@ -131,11 +189,11 @@ export default class App extends React.Component {
               <div className="rows">
                 {
                   item.list.map((jtem, jndex) => <div key={jndex} className="col">
-                    <img src={jtem.Poster} alt="" />
-                    <h3>{jtem.Title}</h3>
+                    <img src={jtem.coverImg} alt="" />
+                    <h3>{jtem.name}</h3>
                     <p>{jtem.label}</p>
                     <div className="inf">
-                      <span>{jtem.Year}</span>
+                      <span>{jtem.date}</span>
                       {
                         jtem.rate ? <span>score: {jtem.rate} / 10</span> : ''
                       }

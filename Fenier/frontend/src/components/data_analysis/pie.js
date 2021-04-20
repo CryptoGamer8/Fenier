@@ -13,15 +13,15 @@ class PieChart extends Component {
 				//{id: 35,name: "Comedy", total_num: 0},
 				{id: 80,name: "Crime", total_num: 0},
 				//{id: 99,name: "Documentary", total_num: 0},
-				{id: 18,name: "Drama", total_num: 0},
+				//{id: 18,name: "Drama", total_num: 0},
 				//{id: 10751,name: "Family", total_num: 0},
-				{id: 14,name: "Fantasy", total_num: 0},
+				//{id: 14,name: "Fantasy", total_num: 0},
 				{id: 36,name: "History", total_num: 0},
-				{id: 27,name: "Horror", total_num: 0},
-				{id: 10402,name: "Music", total_num: 0},
-				{id: 9648,name: "Mystery", total_num: 0},
+				//{id: 27,name: "Horror", total_num: 0},
+				//{id: 10402,name: "Music", total_num: 0},
+				//{id: 9648,name: "Mystery", total_num: 0},
 				//{id: 10749,name: "Romance", total_num: 0},
-				{id: 878,name: "Science Fiction", total_num: 0},
+				//{id: 878,name: "Science Fiction", total_num: 0},
 				//{id: 10770,name: "TV Movie", total_num: 0},
 				{id: 53,name: "Thriller", total_num: 0},
 				{id: 10752,name: "War", total_num: 0},
@@ -36,15 +36,15 @@ class PieChart extends Component {
 				//{label: "Comedy", y: 0},
 				{label: "Crime", y: 0},
 				//{label: "Documentary", y: 0},
-				{label: "Drama", y: 0},
+				//{label: "Drama", y: 0},
 				//{label: "Family", y: 0},
-				{label: "Fantasy", y: 0},
+				//{label: "Fantasy", y: 0},
 				{label: "History", y: 0},
-				{label: "Horror", y: 0},
-				{label: "Music", y: 0},
-				{label: "Mystery", y: 0},
+				//{label: "Horror", y: 0},
+				//{label: "Music", y: 0},
+				//{label: "Mystery", y: 0},
 				//{label: "Romance", y: 0},
-				{label: "Science Fiction", y: 0},
+				//{label: "Science Fiction", y: 0},
 				//{label: "TV Movie", y: 0},
 				{label: "Thriller", y: 0},
 				{label: "War", y: 0},
@@ -68,7 +68,7 @@ class PieChart extends Component {
 		let geners = this.state.genres
 		let dataPoints = this.state.dataPoints
 		for (let index = 0; index < this.state.genres.length; index++) {
-			let url = `https://api.themoviedb.org/3/discover/movie?api_key=${this.state.apiKey}&with_genres=${this.state.genres[index].id}&with_vast=500`
+			let url = `https://api.themoviedb.org/3/discover/movie?api_key=${this.state.apiKey}&with_genres=${this.state.genres[index].id}&with_cast=500`
 			fetch(url).then(res => res.json())
 			.then(res => {
 				geners[index].total_num = res.total_results
@@ -121,11 +121,11 @@ class PieChart extends Component {
 			data: [{
 				type: "pie",
 				startAngle: 75,
-				toolTipContent: "<b>{label}</b>: {y}%",
+				toolTipContent: "<b>{label}</b>: {y}",
 				showInLegend: "true",
 				legendText: "{label}",
 				indexLabelFontSize: 16,
-				indexLabel: "{label} - {y}%",
+				indexLabel: "{label} - {y}",
 				dataPoints: this.state.dataPoints
 			}]
 			
