@@ -3,13 +3,14 @@ import Reviews from './reviews';
 import Slides from './slides';
 import Contact from './contact';
 
-function Homepage() {
+function Homepage(props) {
     return (
         <div>
             <Slides />
             <Movies />
             <Reviews />
             <Contact />
+            <h1>{props.name}</h1>
         </div>
     );
 }
