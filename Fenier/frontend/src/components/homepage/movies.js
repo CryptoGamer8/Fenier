@@ -30,8 +30,6 @@ export default class App extends React.Component {
   getHotMovies() {
     //const { data } = require('./movies.json')
 
-
-
     const {data} = fetch('http://127.0.0.1:8000/movies/all')
     .then(res => res.json())
     .then(r => {

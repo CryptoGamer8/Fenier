@@ -6,13 +6,13 @@ import App from './App'
 
 ReactDOM.render(
 // XDong change
-  <BrowserRouter>
-      <App />
-  </BrowserRouter>,
+  // <BrowserRouter>
+  //     <App />
+  // </BrowserRouter>,
 
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 
   document.getElementById('root')
 )
