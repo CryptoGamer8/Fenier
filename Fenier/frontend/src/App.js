@@ -46,11 +46,14 @@
 // }
 
 import Homepage from './components/homepage/index'
+import MainCard from './components/reviews/card'
+import AddReview from './components/reviews/review_add'
+import ReviewSearch from './components/reviews/review_search'
 
 function App() {
     return (
       <div>
-        <Homepage/>
+        <ReviewSearch/>
       </div>
     )
 };

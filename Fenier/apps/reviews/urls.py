@@ -10,5 +10,5 @@ urlpatterns = [
     path('users/name=<str:name>',views.ReviewsUserName.as_view()),
     path('movies/name=<str:name>',views.ReviewsMoviesName.as_view()),
     path('movies/id=<int:id>',views.ReviewsMoviesId.as_view()),
-    #path('list/',views.list)
+
 ]

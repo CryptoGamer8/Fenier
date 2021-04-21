@@ -25,7 +25,7 @@ const PostsData = [
   
   // Start App
   
-  class Main extends React.Component { 
+  class MainCard extends React.Component { 
     constructor() {
       super();
       
@@ -122,8 +122,7 @@ const PostsData = [
     }
   }
 
-
-  export default Card;
+  export default MainCard;
 
 /*
 class Card extends React.Component {

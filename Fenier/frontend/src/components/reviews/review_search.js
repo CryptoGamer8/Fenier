@@ -1,7 +1,7 @@
 import React, {Component,useState} from 'react';
 
 
-function Reviewsearch(props){ 
+function ReviewSearch(props){ 
 
       const [movie, setMovie] = useState("");
       const [rates, setRates] = useState("");
@@ -110,7 +110,7 @@ class Reviewsearch extends Component {
   }
   */
 
-export default Reviewsearch;
+export default ReviewSearch;
 
 
 
