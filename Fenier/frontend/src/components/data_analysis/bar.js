@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Analysis from '.';
 import CanvasJSReact from '../../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class BarChart extends Component {
@@ -26,7 +27,7 @@ class BarChart extends Component {
 				{id: 10752,name: "War", total_num: 0},
 				{id: 37,name: "Western", total_num: 0}
 			],
-			year : 2019,
+			year: this.props.year,
 			apiKey : "002f58f23a005b82c32d167ba7872e11",
 			dataPoints: [
 				{label: "Action", y: 0},
