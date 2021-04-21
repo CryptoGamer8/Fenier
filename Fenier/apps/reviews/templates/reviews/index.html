@@ -1,5 +1,20 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'reviews/index.css' %}">
 
-<h1>Hello Reviews</h1>
+<h1>Reviews</h1>
 <a href="{% url 'homepage:index' %}"><p>homepage</p></a>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <h2>Add Review</h2> 
+    <p>Reviews ID<input type="text" name ="review_id"></p>
+    <p>User Name<input type="text" name ="review_name"></p>
+    <p>Movie ID<input type="text" name ="review_movieid"></p>
+    <p>Movie Name<input type="text" name ="review_moviename"></p>
+    <p>Rates<input type="text" name ="review_rates"></P>
+    <p>Comment<input type="text" name="review_comment"></p>
+    <p>Comment Image<input type="text" name="review_commentimage"></p>
+
+    <p><button type="submit" class="btn">Save</button></p>
+    <a href="list">See all Reviews</a>
+</form>

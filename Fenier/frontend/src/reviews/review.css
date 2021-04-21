@@ -1,0 +1,11 @@
+.addreview{
+    display: inline-block;
+    font-family:"Times New Roman", Times, serif;
+}
+.review_table{
+    display: inline-block;
+
+}
+table, th, td{
+    border: 1px solid black;
+}
