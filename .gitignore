@@ -4,4 +4,4 @@ demo
 virtual
 Fenier/frontend/node_modules
 .vscode
-**/*.pyc
+*.pyc
