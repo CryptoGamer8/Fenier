@@ -6,11 +6,8 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 
 SwiperCore.use([Navigation, A11y]);
-function sayHello(name) {
-  <h1>1111</h1>
-  alert(`hello, ${name}`);
-}
-export default class App extends React.Component {
+
+export default class newmovie extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -28,10 +25,6 @@ export default class App extends React.Component {
     this.getHotMovies()
   }
   getHotMovies() {
-    //const { data } = require('./movies.json')
-
-
-
     const {data} = fetch('http://127.0.0.1:8000/movies/all')
     .then(res => res.json())
     .then(r => {
@@ -43,6 +36,7 @@ export default class App extends React.Component {
         parts: Object.assign(this.state.parts, {hotMovies})
       })
     })
+
   }
   detailM(e) {
     localStorage.setItem('movie', JSON.stringify(e))
@@ -61,7 +55,6 @@ export default class App extends React.Component {
               navigation
             >
               {
-                  //parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div  className="col">
                   parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div data-info={jtem} onClick={this.detailM.bind(this,jtem)}  className="col">
                     <img src={jtem.cast} alt="" />
                     <h3>{jtem.name}</h3>
@@ -76,6 +69,8 @@ export default class App extends React.Component {
                 }
             </Swiper>
           </div>
+
+
         </main>
       </div>
     );
