@@ -57,12 +57,13 @@ export default class App extends React.Component {
             <h1>Hot Movies</h1>
             <Swiper
               spaceBetween={50}
-              slidesPerView={4}
+              slidesPerView={5}
               navigation
             >
               {
-                  //parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div  className="col">
-                  parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div data-info={jtem} onClick={this.detailM.bind(this,jtem)}  className="col">
+                //parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div data-info={jtem} onClick={this.detailM.bind(this,jtem)}  className="col"></div>
+                  parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div  className="col">
+                  
                     <img src={jtem.cast} alt="" />
                     <h3>{jtem.name}</h3>
                     <p>{jtem.label}</p>

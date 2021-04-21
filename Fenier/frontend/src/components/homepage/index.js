@@ -3,6 +3,7 @@ import Reviews from './reviews';
 import Slides from './slides';
 import Contact from './contact';
 import Front from './front';
+import Movie from './movies';
 import Newmovie from './newmovie';
 
 import {
