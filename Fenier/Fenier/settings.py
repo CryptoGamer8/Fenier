@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'Fenier.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Fenier',
+        'NAME': 'mysql',
         'USER': 'root',
         'PASSWORD': '11008214',
         'HOST': '',

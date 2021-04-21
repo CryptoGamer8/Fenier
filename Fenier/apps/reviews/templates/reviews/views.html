@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <body>
+    <table border="1" class ="review_table">
+        <thead>
+            <tr>
+                <th>Review ID</th>
+                <th>User Name</th>
+                <th>Movie ID</th>
+                <th>Movie Name</th>
+                <th>Rates</th>
+                <th>Comment</th>
+                <th>Comment Image</th>
+            </tr>
+        </thead>
+    <tbody>
+    {% for reviews in reviews %}
+            <tr>
+
+                <td>{{reviews.id}}</td>
+                <td>{{reviews.user_name}}</td>
+                <td>{{reviews.movie_id}}</td>
+                <td>{{reviews.movie_name}}</td>
+                <td>{{reviews.rates}}</td>
+                <td>{{reviews.comments}}</td>
+                <td>{{reviews.comments_img}}</td>
+            </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </body>
+</html>
