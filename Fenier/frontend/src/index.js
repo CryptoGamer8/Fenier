@@ -5,15 +5,14 @@ import App from './App'
 
 
 ReactDOM.render(
-<<<<<<< HEAD
-  <BrowserRouter>
-      <App />
-  </BrowserRouter>,
-=======
+// XDong change
+  // <BrowserRouter>
+  //     <App />
+  // </BrowserRouter>,
+
   <React.StrictMode>
     <App />
-
   </React.StrictMode>,
->>>>>>> main
+
   document.getElementById('root')
 )
