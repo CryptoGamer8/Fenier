@@ -1,10 +1,9 @@
-/* @flow */
 import React, { Component } from 'react'
 import { Row, Col, Rate, Tag } from 'antd'
 import YouTube from 'react-youtube'
 import Utils from '../../../Services/utilsService'
 import Api from '../../../Services/dataService'
-import './Movie.css'
+import './MovieList.css'
 
 type State = {
   name: number,

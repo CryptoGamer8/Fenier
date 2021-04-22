@@ -7,13 +7,8 @@ import { Menu } from 'antd'
 export default function Navbar () {
   return (
     <Menu mode='horizontal'>
-      <Menu.Item >
-        <Link to='/'>
-          Home
-        </Link>
-      </Menu.Item>
       <Menu.Item>
-        <Link to='popular'>
+        <Link to='MovieList'>
            Movie
         </Link>
       </Menu.Item>

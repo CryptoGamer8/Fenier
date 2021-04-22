@@ -1,7 +1,7 @@
-/* @flow */
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Card } from 'antd'
+import './CardTemplate.css'
 
 type Props = {
   name: number,
