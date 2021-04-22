@@ -8,6 +8,7 @@ import ReviewSearch from './components/reviews/review_search'
 import Analysis from './components/data_analysis/index'
 import Movie from './components/Movies/Movie/Movie'
 
+
 function App() {
 
     return (
