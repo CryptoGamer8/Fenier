@@ -1,100 +1,41 @@
-.app-header {
-    display:block;
-    padding: 30px;
-  }
-.card-header {
-    background-size: auto;
-    padding: 25px;
+.card-list{
+  margin: 60px 10px;
+  border: grey;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 300px;
+  display: flex;
 }
 
-  .card-header h4{
-     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.card-list:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.movieName{
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
      font-size: large; 
-     color: lavender;
+     color: grey;
      padding: 25px;
-  }
-  
-  .app-title {
-    display:inline-block;
-    width: 100%;
-    margin: 80px 0 0 0;
-    position:relative;
-    color:#fff;
+  } 
 
-    @media(min-width:768px) {
-      width: 20%;
-      margin: 280px 0 0 0;
-    }
-  }
-
-  .app-title p {
-    font-weight: 200;
-    opacity: .5;
-  }
-
-  .app-title h1 {
-    font-size: 52px;
-    margin: 0;
-  }
-  
-  .app-title-content {
-    position:relative;
-    top:50%;
-    left: 50%;
-    width:100%;
-    text-align:center;
-    transform:translate(-50%, -50%);
-    
-    @media(min-width:768px) {
-      width:auto;
-      position:absolute;
-      text-align:left;
-    }
-  }
-  
-  .app-card-list {
-    display:inline-block;
-    width:100%;
-    margin:0;
-    min-height: 75vh;
-    white-space:normal;
-    overflow-x: scroll;
-    margin-top:-70px;
-
-    @media(min-width:768px) {
-        width:80%;
-        white-space:nowrap;
-        margin-top: 0;
-    }
-  }    
-.card{
-    margin: 60px 30px;
-    display: inline-block;
-    border: grey;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    width: 1000px;
-  }
-
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
-  .card-body {
-    white-space: normal;
+.Tit{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  opacity: .5;
 }
-  
-  .designer-link {
-    display:inline-block;
-    padding-top:40px;
-  }
+p{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+}
 
-  .button-primary{
-        border: none;
-        font-size: large;
-        font-family: Arial, Helvetica, sans-serif;
-        float: right;
-        text-decoration: none;
-  }
-  
-  
+#link{
+  border: none;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  text-decoration: none;
+}
+
+.card {
+  display: inline-block;
+  height: 200px;
+  width: 300px;
+}
