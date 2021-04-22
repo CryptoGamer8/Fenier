@@ -1,0 +1,26 @@
+.review_table{
+    display: inline-block;
+    width: 600px;
+    margin: 10 auto;
+    font-family: system-ui;
+}
+.review_table th{
+    background-color: #778899;
+    margin: 0;
+    padding: 0;
+    color:whitesmoke;
+    font-size: 120%;
+    font: inherit;
+    vertical-align: baseline;
+    padding: 12px;
+}
+.review_table td{    
+    font-family: system-ui;
+    background-color: whitesmoke;
+    color: #778899;
+    padding: 8px;
+    font-size: medium;
+}
+.review_table tr{
+    border: 1px solid #778899;
+}
