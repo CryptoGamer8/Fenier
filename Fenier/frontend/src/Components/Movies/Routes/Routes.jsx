@@ -9,7 +9,7 @@ const Routes = () => (
     <Route exact path='/MovieList' render={
       props => (<Showfilms category='popular'{...props} />
     )} />
-    <Route exact path='/movie/:id' component={Movie} />
+    <Route exact path='/movielist/:id' component={Movie} />
   </Switch>
 )
 
