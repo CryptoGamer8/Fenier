@@ -1,0 +1,51 @@
+.addreview {
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+    border: 1px solid #778899;
+    padding: 8px;
+    font-size: large;
+    color: #778899;
+}
+
+.addreview th {
+    font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+    font-family: system-ui;
+    font-size: xx-large;
+    color: #778899;
+}
+
+.addreview input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.addreview textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+.addreview button {
+    width: 100%;
+    background-color: #778899;
+    color: whitesmoke;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
