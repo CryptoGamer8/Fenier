@@ -1,11 +1,13 @@
 import React from 'react';
 import './homepage.css';
-import Header from './header/index'
 import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import Front from './front';
+import HomeAnalysis from './data_analysis'
+import HomeReviews from './homereviews'
+import {Link} from 'react-router-dom'
 
 SwiperCore.use([Navigation, A11y]);
 
@@ -25,15 +27,13 @@ export default class Newmovie extends React.Component {
     this.getMovies = this.getMovies.bind(this)
     this.getHotMovies = this.getHotMovies.bind(this)
   }
+
   componentDidMount() {
     this.getMovies()
     this.getHotMovies()
   }
+
   getHotMovies() {
-    //const { data } = require('./movies.json')
-
-
-
     const {data} = fetch('http://127.0.0.1:8000/movies/all')
     .then(res => res.json())
     .then(r => {
@@ -46,6 +46,7 @@ export default class Newmovie extends React.Component {
       })
     })
   }
+
   getMovies() {
     fetch('http://www.omdbapi.com/?s=Batman&page=1&apikey=20c592d9')
     .then(res => res.json())
@@ -70,20 +71,22 @@ export default class Newmovie extends React.Component {
   render() {
     const { bannerList, parts } = this.state
     return (
+
       <div className="App">
-        <Header />
         <Front />
         <main>
           <div id="hotMovies" className="container">
             <h1>Hot Movies</h1>
             <Swiper
               spaceBetween={50}
-              slidesPerView={2}
+              slidesPerView={4}
               navigation
             >
               {
-                  parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div data-info={jtem} onClick={this.detailM.bind(this,jtem)}  className="col">
-                    <img src={jtem.img_url} alt="" />
+                  parts.hotMovies.list.map( (jtem, jndex) => <SwiperSlide key={jndex} ><div data-info={jtem} className="col">
+                       {/* onClick={this.detailM.bind(this,jtem)}  */}
+                    <img height = "500" width = "500" src={jtem.img_url}  alt="" 
+                      onClick={()=> window.open("/movie/"+jtem.id)} />
                     <h3>{jtem.name}</h3>
                     <p>{jtem.label}</p>
                     <div className="inf">
@@ -92,9 +95,21 @@ export default class Newmovie extends React.Component {
                         jtem.rates ? <span>score: {jtem.rates} / 10</span> : ''
                       }
                     </div>
-                  </div></SwiperSlide>)
+                  </div></SwiperSlide>   )
                 }
             </Swiper>
+          </div>
+          <Link to="/movielist"><h2>More to Explore</h2></Link>
+          
+          <div id="reviews" className="container">
+            <h1>Reviews</h1>
+            <HomeReviews/>
+          </div>
+
+
+          <div id="statistics" className="container">
+            <h1>Statistics</h1>
+            <HomeAnalysis/>
           </div>
 
 

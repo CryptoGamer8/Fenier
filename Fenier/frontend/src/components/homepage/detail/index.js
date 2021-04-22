@@ -9,6 +9,7 @@ export default class Detail extends React.Component {
     }
     render() {
         const info = JSON.parse(localStorage.getItem('movie'))
+        console.log(info)
         return <div style={{width: '60vw', margin: '0 auto'}}>
             {/* <video src={info.movie_url} controls /> */}
             <iframe width="560" height="315" src={info.movie_url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -17,6 +18,7 @@ export default class Detail extends React.Component {
             <p>date: {info.year}</p>
             <p>rates: {info.rates}</p>
             <p>desc: {info.outline}</p>
+            <p>actor: {info.cast}</p>
         </div>
     }
 }

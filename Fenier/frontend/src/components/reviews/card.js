@@ -22,7 +22,6 @@ const PostsData = [
         "image": "/imgs/review/original.jpg"
       }]
   
-  
   // Start App
   
   class MainCard extends React.Component { 
@@ -55,7 +54,6 @@ const PostsData = [
     }
   }
   
-  
   class Title extends React.Component {
     render() {
       return <section className="app-title">
@@ -66,7 +64,6 @@ const PostsData = [
       </section>
     }
   }
-  
   
   class Button extends React.Component {
     render() {
@@ -102,7 +99,7 @@ const PostsData = [
           <p className="date">March 20 2015</p>          
           <h2>{this.props.title}</h2>          
           <p className="body-content">{this.props.text}</p>
-          
+  
           <Button />
         </div>
       )
