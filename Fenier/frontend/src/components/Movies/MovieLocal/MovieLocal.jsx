@@ -16,7 +16,7 @@ type State = {
   videoURL: string
 }
 
-export default class Movie extends Component <State> {
+export default class MovieLocal extends Component <State> {
 
   getMovieById: (movieId: number) => {
     const url = `https://127.0.0.1/movie/${movieId}`
