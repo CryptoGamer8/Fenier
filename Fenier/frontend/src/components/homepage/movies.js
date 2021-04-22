@@ -30,6 +30,8 @@ export default class App extends React.Component {
   getHotMovies() {
     //const { data } = require('./movies.json')
 
+
+
     const {data} = fetch('http://127.0.0.1:8000/movies/all')
     .then(res => res.json())
     .then(r => {
@@ -42,7 +44,6 @@ export default class App extends React.Component {
       })
     })
   }
-
   detailM(e) {
     localStorage.setItem('movie', JSON.stringify(e))
     this.props.history.push('/detail')
@@ -56,12 +57,13 @@ export default class App extends React.Component {
             <h1>Hot Movies</h1>
             <Swiper
               spaceBetween={50}
-              slidesPerView={5}
+              slidesPerView={3}
               navigation
             >
               {
                 //parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div data-info={jtem} onClick={this.detailM.bind(this,jtem)}  className="col"></div>
                   parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div  className="col">
+                  
                     <img src={jtem.img_url} alt="" />
                     <h3>{jtem.name}</h3>
                     <p>{jtem.label}</p>
@@ -79,4 +81,5 @@ export default class App extends React.Component {
       </div>
     );
   }
+
 }

@@ -7,13 +7,13 @@ import AddReview from './components/reviews/review_add'
 import ReviewSearch from './components/reviews/review_search'
 import Analysis from './components/data_analysis/index'
 import Movie from './components/Movies/Movie/Movie'
-
+import Router from './router/index'
 
 function App() {
 
     return (
       <div>
-        <Homepage/>
+        <Router/>
       </div>
     )
 };

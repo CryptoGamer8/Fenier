@@ -52,7 +52,7 @@
   transform: translateX(10px);
 }
 .swiper-container img {
-  max-height: 469px;
+  width: 75%;
   display: block;
   margin: 0 auto;
 }

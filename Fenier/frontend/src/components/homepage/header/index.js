@@ -16,7 +16,6 @@ export default class Header extends React.Component {
         return (<div className="header">
             <div className="header-l">
                 {
-                    this.alist.map(item => <div data-id={item.link} onClick={(e) => this.scrollTo(e)} key={item.label}>{item.label}</div>)
                 }
             </div>
             <div className="header-r">
