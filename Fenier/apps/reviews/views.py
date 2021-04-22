@@ -32,7 +32,6 @@ def index(request):
         # comments_img=Reviews_commentimage
         )
 
-
     return render(request,'reviews/index.html')
 
 '''

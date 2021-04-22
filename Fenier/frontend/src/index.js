@@ -5,10 +5,6 @@ import App from './App'
 
 
 ReactDOM.render(
-// XDong change
-  // <BrowserRouter>
-  //     <App />
-  // </BrowserRouter>,
 
   <React.StrictMode>
     <App />

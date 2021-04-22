@@ -5,6 +5,7 @@ import Contact from './contact';
 import Front from './front';
 import Movie from './movies';
 import Newmovie from './newmovie';
+import Analysis from './analysis'
 
 function Homepage(props) {
     return (
@@ -12,6 +13,7 @@ function Homepage(props) {
             <Slides />
             <Movies />
             <Reviews />
+            <Analysis />
             <Contact />
             <h1>{props.name}</h1>
         </div>

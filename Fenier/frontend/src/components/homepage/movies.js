@@ -42,6 +42,7 @@ export default class App extends React.Component {
       })
     })
   }
+
   detailM(e) {
     localStorage.setItem('movie', JSON.stringify(e))
     this.props.history.push('/detail')
@@ -61,8 +62,7 @@ export default class App extends React.Component {
               {
                 //parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div data-info={jtem} onClick={this.detailM.bind(this,jtem)}  className="col"></div>
                   parts.hotMovies.list.map((jtem, jndex) => <SwiperSlide key={jndex}><div  className="col">
-                  
-                    <img src={jtem.cast} alt="" />
+                    <img src={jtem.img_url} alt="" />
                     <h3>{jtem.name}</h3>
                     <p>{jtem.label}</p>
                     <div className="inf">
@@ -79,5 +79,4 @@ export default class App extends React.Component {
       </div>
     );
   }
-
 }
