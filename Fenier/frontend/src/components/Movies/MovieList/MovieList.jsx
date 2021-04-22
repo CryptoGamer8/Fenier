@@ -1,78 +1,70 @@
-/* @flow */
 import React, { Component } from 'react'
-import { Row, Col, Rate, Tag } from 'antd'
-import YouTube from 'react-youtube'
-import Utils from '../../../Services/utilsService'
-import Api from '../../../Services/dataService'
-import './Movie.css'
+import CardTemplate from '../CardTemplate/CardTemplate'
+import Api from '../../../Services/dataService.js'
+import { Row, Col } from 'antd'
+import { v4 as uuidv4 } from 'uuid';
+import './Showfilms.css'
 
-type State = {
-  name: number,
-  description: string,
-  urlImage: string,
-  stars: number,
-  release_date: string,
-  videoId: number
-}
-
-export default class Movie extends Component <State> {
+export default class Showfilms extends Component {
   constructor (props) {
     super(props)
-
     this.state = {
-      name: '',
-      description: '',
-      urlImage: '',
-      stars: 0,
-      genres: [],
-      release_date: '',
-      videoId: 0
+      results: []
     }
   }
 
-  componentDidMount () {
-    const idFilm = parseInt(this.props.match.params.id, 10)
-    Api.getMovieById(idFilm)
-        .then(data => {
-          console.log('dataApi', data)
-          this.setState({
-            urlImage: data.poster_path,
-            name: data.title,
-            stars: data.vote_average / 2,
-            description: data.overview,
-            genres: (data.genres: Array<number>),
-            release_date: data.release_date,
-            videoId: data.videos.results['0'].key
+  handleApiCall (props) {
+    if (props.match.params.query) {
+      Api.getSearch(props.match.params.query)
+          .then(data => {
+            this.setState({
+              results: data.results
+            })
           })
-        })
+    } else {
+      Api.getMovies(props.category)
+          .then(data => {
+            this.setState({
+              results: data.results
+            })
+          })
+    }
+  }
+
+  componentWillReceiveProps (nextProps) {
+    this.handleApiCall(nextProps)
+  }
+
+  componentDidMount () {
+    this.handleApiCall(this.props)
   }
 
   render () {
     return (
-      <Row>
-        <Col span={8} offset={1}>
-          <img alt={this.state.name} width='85%' src={`https://image.tmdb.org/t/p/w500${this.state.urlImage}`} />
-        </Col>
-        <Col span={12} offset={1}>
-          <h1>{this.state.name}</h1>
-          <hr />
-          <strong> Description: </strong>
-          <p>{this.state.description}</p>
-          <hr />
-          <div className='genere'>
-            <span className='genereTitle'>
-              <strong>Generes: </strong>
-            </span>
-            {this.state.genres.map(genere => <Tag color={Utils.randomColor()} key={genere.id}>{genere.name}</Tag>)}
-          </div>
-          <Rate className='rate' value={this.state.stars} />
-          <hr />
-          <div className='trailer'>
-            <strong> Trailer: </strong>
-          </div>
-          <YouTube videoId={this.state.videoId} />
-        </Col>
-      </Row>
+      <div>
+        <Row>
+          <Col span={12} offset={6}>
+            <h1 className='title'>{ this.props.currentPage } </h1>
+          </Col>
+        </Row>
+        <Row gutter={24}>
+          {
+            this.state.results.map(film => {
+              return (
+                <Col className='gutter-row' span={5} offset={1} key={uuidv4()}>
+                  <CardTemplate
+                    name={film.title}
+                    date={film.release_date}
+                    vote={film.vote_average/2}
+                    image={film.poster_path}
+                    id={film.id}
+                  />
+                </Col>
+              )
+            })
+          }
+        </Row>
+      </div>
     )
   }
 }
