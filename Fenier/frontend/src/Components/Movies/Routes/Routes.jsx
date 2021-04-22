@@ -1,13 +1,12 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Home from '../Home/Home'
-import Movie from '../Movie/Movie'
+import Movie from '../MovieList/MovieList'
+import 'antd/dist/antd.css'
 import Showfilms from '../Showfilms/Showfilms'
 
 const Routes = () => (
   <Switch>
-    <Route exact path='/' component={Home} />
-    <Route exact path='/popular' render={
+    <Route exact path='/MovieList' render={
       props => (<Showfilms category='popular'{...props} />
     )} />
     <Route exact path='/movie/:id' component={Movie} />
