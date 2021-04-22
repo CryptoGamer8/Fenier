@@ -62,8 +62,6 @@ class PieChart extends Component {
 		chart.render();
 	}
 
-    
-
 	discoverMovieByYear = year => {
 		let geners = this.state.genres
 		let dataPoints = this.state.dataPoints
@@ -85,8 +83,6 @@ class PieChart extends Component {
 	
     componentDidMount(){
 		setInterval(this.updateChart, 1000);
-
-
 		// console.log(this.state.dataPoints)
 		// for (let index = 0; index < this.state.genres.length; index++) {
 		// 	fetch(https://api.themoviedb.org/3/search/movie?api_key={002f58f23a005b82c32d167ba7872e11}&language=en-US&query=Sony&page=1&include_adult=false)
@@ -108,8 +104,6 @@ class PieChart extends Component {
     
 	render() {
         // define a variable to get state
-
-
 		const options = {
             exportEnabled: true,
 			animationEnabled: true,
