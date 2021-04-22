@@ -1,8 +1,8 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Movie from '../MovieList/MovieList'
+import Movie from '../Movie/Movie'
 import 'antd/dist/antd.css'
-import Showfilms from '../Showfilms/Showfilms'
+import Showfilms from '../movieList/Movielist'
 
 const Routes = () => (
   <Switch>
