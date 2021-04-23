@@ -65,6 +65,9 @@ class MovieLocal extends React.Component{
         <Col span={12} offset={1}>
           <h1>{this.state.review.name}</h1>
           <hr />
+          <strong>release year</strong>
+          <h3>{this.state.review.release_date}
+          <hr />
           <strong> Description: </strong>
           <p>{this.state.review.description}</p>
           <hr />
