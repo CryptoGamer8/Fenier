@@ -1,4 +1,3 @@
-// XDong
 import React, { Component } from 'react'
 import Router from './router/index'
 

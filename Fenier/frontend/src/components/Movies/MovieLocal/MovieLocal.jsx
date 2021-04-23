@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component } from 'react'
 import { Row, Col, Rate, Tag } from 'antd'
+import ListReview from '../../reviews/list_review'
 import 'antd/dist/antd.css'
 import './Movie.css'
 
@@ -50,6 +51,7 @@ class MovieLocal extends React.Component{
     //   </div>
     // )
     return (
+      <div>
       <Row>
         <Col span={8} offset={1}>
           <img alt={this.state.movie.name} width='80%' src= {this.state.movie.img_url}/>
@@ -74,9 +76,13 @@ class MovieLocal extends React.Component{
           <div className='trailer'>
             <strong> Trailer: </strong>
           </div>
-          <iframe width="560" height="315" src={this.state.movie.movie_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="650" height="400" src={this.state.movie.movie_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Col>
-      </Row>
+      </Row><br/><br/><br/><br/>
+      <h2 style={{"margin-left": "30px"}}>Reviews</h2>
+      <ListReview id={this.state.id}></ListReview>
+      <button onClick={()=>window.open("/addreview/"+this.state.movie.id+"/"+this.state.movie.name)}>Add Review</button>
+      </div>
     )
   }
 }

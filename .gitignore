@@ -6,3 +6,4 @@ Fenier/frontend/node_modules
 .vscode
 *.pyc
 Fenier/Fenier/settings.py
+**/public/videos

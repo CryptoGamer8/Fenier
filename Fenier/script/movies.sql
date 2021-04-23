@@ -95,4 +95,14 @@ WHERE NOT EXISTS (
 	SELECT id FROM movies_movies WHERE id = 7
 ) LIMIT 1;
 
-
+INSERT INTO movies_movies (id, name, year, outline, cast, genre, rates, movie_url, img_url)
+SELECT * FROM (SELECT 8 AS id, "Leap Year", 2010, "Successful real estate stager Anna Brady is frustrated that her cardiologist boyfriend Jeremy Sloane still has not proposed to her after four years. She decides to travel from Boston to Dublin, to propose to him on February 29, leap day.",
+"Amy Adams ... Anna Brady
+Matthew Goode ... Declan O'Callaghan
+Adam Scott ... Jeremy Sloane
+John Lithgow ... Jack Brady, Anna's father
+Kaitlin Olson ... Libby Sloane", "Action, Adventure, Drama", 8 AS rates, "/videos/leap_year.mp4", "/imgs/movies/leap_year.jpg")
+AS tmp
+WHERE NOT EXISTS (
+	SELECT id FROM movies_movies WHERE id = 8
+) LIMIT 1;

@@ -67,3 +67,10 @@ AS tmp
 WHERE NOT EXISTS(
     SELECT id FROM reviews_reviews WHERE id = 9
 ) LIMIT 1;
+
+INSERT INTO reviews_reviews (id, user_name, movie_id, movie_name, rates, comments)
+SELECT * FROM (SELECT 10 AS id, "Yuki", 8 AS movie_id, "Leap Year", 7 AS rate, "What do women's pictures have against women? So often recently, romantic comedies create a female lead who's successful in business but a nag, a ditz or klutz at human relationships. And when it comes to men, she's myopic: she can't see Andy Adorable right in front of her. These afflictions beset the career gals played by Sandra Bullock in The Proposal, Katherine Heigl in The Ugly Truth and Sarah Jessica Parker in Did You Hear About the Morgans?. All were obliged to take a course in sensitivity training, at feature-film length, to nudge them into the arms of, respectively, Ryan Reynolds, Gerard Butler and Hugh Grant — guys whose job was to wait around attractively until the leading lady comes to her senses. In each case, she's uptight because she can't love herself / get out of herself / trust her instincts / spot her costar.")
+AS tmp
+WHERE NOT EXISTS(
+    SELECT id FROM reviews_reviews WHERE id = 10
+) LIMIT 1;
