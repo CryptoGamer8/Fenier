@@ -86,7 +86,7 @@ export default class Newmovie extends React.Component {
                   parts.hotMovies.list.map( (jtem, jndex) => <SwiperSlide key={jndex} ><div data-info={jtem} className="col">
                        {/* onClick={this.detailM.bind(this,jtem)}  */}
                     <img height = "500" width = "500" src={jtem.img_url}  alt="" 
-                      onClick={()=> window.open("/movielocal/"+jtem.id)} />
+                      onClick={()=> window.open("/movielocal/"+jtem.name)} />
                     <h3>{jtem.name}</h3>
                     <p>{jtem.label}</p>
                     <div className="inf">
@@ -99,13 +99,12 @@ export default class Newmovie extends React.Component {
                 }
             </Swiper>
           </div>
-          <Link to="/movielist"><h2>More to Explore</h2></Link>
+          <div  onClick={()=>window.open("/movielist")}><h2>More to Explore &gt;&gt;</h2></div>
           
           <div id="reviews" className="container">
             <h1>Reviews</h1>
             <HomeReviews/>
           </div>
-
 
           <div id="statistics" className="container">
             <h1>Statistics</h1>
@@ -116,11 +115,11 @@ export default class Newmovie extends React.Component {
           <footer className="container" id="contactUs">
             <h1>Concat Us</h1>
             <div style={{ display: 'flex', justifyContent: 'flex-start', textAlign: 'left', color: "#707070", alignItems: 'center' }}>
-              <div style={{ width: '40%', padding: '40px' }}>
+              <div style={{ width: '80%', padding: '40px' }}>
                 <h4>About Us</h4>
                 <p className="content">We are a new website aimed to help film fans find recommendation resources for quality entertainment. As online aggregator of film website, we provide fans with a comprehensive guide to what’s deserve to watch – and what’s waste time – in theaters and at home. We also serve movie fans with soicial function on our site and through reviews channels. If you’re an entertainment fan looking for a recommendation, or to share an opinion, you’ve come to the right place.</p>
               </div>
-              <div className="socialicon" style={{ padding: '0 55px' }}>
+              <div className="socialicon" style={{ padding: '0 55px', marginLeft: '20%', }}>
                 <div style={{ display: 'flex', flexDirection: 'column', }}>
                   <button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16">

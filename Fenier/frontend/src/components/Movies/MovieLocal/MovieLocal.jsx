@@ -9,7 +9,7 @@ class MovieLocal extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      id: this.props.match.params.id,
+      name: this.props.match.params.name,
       movie: {
         cast: "",
         genre: "",
@@ -25,7 +25,7 @@ class MovieLocal extends React.Component{
   }
   
   componentDidMount(){
-    fetch("http://localhost:8000/movies/id="+this.state.id)
+    fetch("http://localhost:8000/movies/name="+this.state.name)
     .then(res=>res.json())
     .then(res=>{
       this.setState({
@@ -54,7 +54,7 @@ class MovieLocal extends React.Component{
       <div>
       <Row>
         <Col span={8} offset={1}>
-          <img alt={this.state.movie.name} width='80%' src= {this.state.movie.img_url}/>
+          <img className="movie_post"  alt={this.state.movie.name} width='500px' height='700px' src= {this.state.movie.img_url}/>
         </Col>
         <Col span={12} offset={1}>
           <h1>{this.state.movie.name}</h1>
@@ -80,8 +80,9 @@ class MovieLocal extends React.Component{
         </Col>
       </Row><br/><br/><br/><br/>
       <h2 style={{"margin-left": "30px"}}>Reviews</h2>
-      <ListReview id={this.state.id}></ListReview>
-      <button onClick={()=>window.open("/addreview/"+this.state.movie.id+"/"+this.state.movie.name)}>Add Review</button>
+      <ListReview name={this.state.name}></ListReview>
+      <button id="addreview" onClick={()=>window.open("/addreview/"+this.state.movie.id+"/"+this.state.movie.name)}>Add Review</button>
+      <br/><br/><br/>
       </div>
     )
   }

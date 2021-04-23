@@ -10,3 +10,6 @@ class ReviewsSerializer(serializers.Serializer):
     rates = serializers.IntegerField()
     comments = serializers.CharField()
     comments_img = serializers.CharField(max_length=80,required=False)
+
+    def create(self, validated_data):
+        return Reviews.objects.create(**validated_data)

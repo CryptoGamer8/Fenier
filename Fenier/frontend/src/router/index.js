@@ -15,7 +15,7 @@ function Router(){
                     <Route exact path='/movielist' render={
                         props => (<Showfilms category='popular'{...props} />) }/>
                     <Route exact path='/movie/:id' component={Movie} />
-                    <Route path="/movielocal/:id" component={MovieLocal} />
+                    <Route path="/movielocal/:name" component={MovieLocal} />
                     <Route path="/addreview/:movieid/:moviename" component={AddReview} /> 
                 </Switch>
             </BrowserRouter>

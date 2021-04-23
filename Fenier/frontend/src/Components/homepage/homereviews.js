@@ -1,9 +1,10 @@
 import CardList from '../reviews/card_list'
+import './homepage.css'
 
 function HomeReviews() {
     
     return (
-        <div>
+        <div className="card_list">
             <CardList/>
         </div>
     )

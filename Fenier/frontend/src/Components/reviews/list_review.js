@@ -6,12 +6,13 @@ class ListReview extends React.Component {
         super(props)
         this.state = {
             reviews : [],
-            id: props.id
+            id: props.id,
+            name: props.name
         }
     }
 
     componentDidMount() {
-        fetch("http://localhost:8000/reviews/movies/id="+this.state.id, {
+        fetch("http://localhost:8000/reviews/movies/name="+this.state.name, {
             method: 'GET',
             headers: {
           'Content-Type': 'application/json'
@@ -22,6 +23,7 @@ class ListReview extends React.Component {
             this.setState({
                 reviews: res
             })
+            console.log(res)
         }
             )
         .catch(err=>console.log(err))

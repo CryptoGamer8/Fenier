@@ -3,13 +3,13 @@ import './review_add.css';
 
 export default class Addreview extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             id: '',
             user_name: '',
-            movie_id: '',
-            movie_name: '',
+            movie_id: this.props.match.params.movieid,
+            movie_name: this.props.match.params.moviename,
             rates: '',
             comments: ''
         };
@@ -18,22 +18,26 @@ export default class Addreview extends Component {
     handleSubmit(e) {
         e.preventDefault();
         var self = this;
-        console.log(this.review_name.value);
+        console.log(this.state.movie_name);
+        var id = 'id'
+        var movie_id = 'movie_id'
+        var movie_name = 'movie_name'
+        var data = {
+            user_name: this.review_name.value,
+            rates: this.review_rates.value,
+            comments: this.review_comment.value,
+        }
+        data[id] = 1
+        data[movie_id] = this.state.movie_id
+        data[movie_name] = this.state.movie_name
 
         // On submit of the form, send a POST request with the data to the server.
-        fetch('/reviews/', {
+        fetch('http://localhost:8000/reviews/id=1', {
                 method: 'post',
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({
-                    id: this.review_id.value,
-                    user_name: this.review_name.value,
-                    movie_id: this.review_movieid.value,
-                    movie_name: this.review_moviename.value,
-                    rates: this.review_rates.value,
-                    comments: this.review_comment.value,
-                })
+                body: JSON.stringify(data)
             })
             .then(function(response) {
                 return response.json()
@@ -43,29 +47,17 @@ export default class Addreview extends Component {
     }
 
     render() {
-        return ( <div>
-           
+        return ( <div id="container">
             <form onSubmit={this.handleSubmit}>
             <table className="addreview" >
-            <h2>Add Review</h2>
-              <tr>
-              <th>Reviews ID</th>
-              <td><input ref={(ref) => {this.review_id = ref}} type="text" name="review_id"/></td>
-              </tr>
-              
+            <h2>Add Review</h2>              
               <tr>
               <th>User Name</th>
               <td><input ref={(ref) => {this.review_name= ref}} type="text" name="review_name" /></td>
               </tr>
-    
-              <tr>
-              <th>Movie ID</th>
-              <td><input ref={(ref) => {this.review_movieid= ref}} type="text" name="review_movieid"/></td>
-              </tr>
-    
               <tr>
               <th>Movie Name</th>
-              <td><input ref={(ref) => {this.review_moviename= ref}} type="text" name="review_moviename"/></td>
+               <th>&nbsp; &nbsp; &nbsp; &nbsp; {this.state.movie_name}</th>
               </tr>
     
               <tr>
@@ -78,7 +70,7 @@ export default class Addreview extends Component {
               <td><textarea ref={(ref) => {this.review_comment= ref}}  name="review_comment"/></td>
               </tr>
     
-              <button id="add" onClick="submit">Submit</button>
+              <button id="add" onClick={()=>alert('successfully!')}>Submit</button>
     
             </table>
             </form>
