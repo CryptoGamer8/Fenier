@@ -19,7 +19,7 @@ function App() {
     return (
       <div>
         {/* <Router></Router> */}
-        <MovieLocal id="1"/>
+        <MovieLocal id="3"/>
         {/* <ListReview id="1"/> */}
       </div>
     )

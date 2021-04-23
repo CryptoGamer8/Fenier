@@ -4,6 +4,7 @@ import { Row, Col, Rate, Tag } from 'antd'
 import YouTube from 'react-youtube'
 import Utils from '../../../Services/utilsService'
 import Api from '../../../Services/dataService'
+import 'antd/dist/antd.css'
 import './Movie.css'
 
 class MovieLocal extends React.Component{
@@ -54,7 +55,7 @@ class MovieLocal extends React.Component{
     return (
       <Row>
         <Col span={8} offset={1}>
-          <img alt={this.state.movie.name} width='85%' src= {this.state.movie.img_url}/>
+          <img alt={this.state.movie.name} width='80%' src= {this.state.movie.img_url}/>
         </Col>
         <Col span={12} offset={1}>
           <h1>{this.state.movie.name}</h1>
@@ -69,14 +70,14 @@ class MovieLocal extends React.Component{
             <span className='genereTitle'>
               <strong>Generes: </strong>
             </span>
-            {/* {this.state.movie.genre.map(genere => <Tag color={Utils.randomColor()} key={genere.id}>{genere.name}</Tag>)} */}
+            {this.state.movie.genre}
           </div>
           <Rate className='rate' value={this.state.movie.rates} />
           <hr />
           <div className='trailer'>
             <strong> Trailer: </strong>
           </div>
-          <iframe width="560" height="315" src={this.state.movie.movie_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="700" height="400" src={this.state.movie.movie_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Col>
       </Row>
     )
