@@ -12,9 +12,8 @@ function Router(){
                 <Switch>
                     <Route exact path="/" component={Homepage} />
                     <Route exact path='/movielist' render={
-      props => (<Showfilms category='popular'{...props} />
-    )} />
-        <Route exact path='/movie/:id' component={Movie} />
+                        props => (<Showfilms category='popular'{...props} />)} />
+                    <Route exact path='/movie/:id' component={Movie} />
                     <Route path="/movielocal/:id" component={Test} />
                 </Switch>
             </BrowserRouter>

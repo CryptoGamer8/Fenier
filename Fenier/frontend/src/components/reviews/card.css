@@ -3,7 +3,7 @@
   border: grey;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width: 300px;
-  display: flex;
+
 }
 
 .card-list:hover {
@@ -36,6 +36,4 @@ p{
 
 .card {
   display: inline-block;
-  height: 200px;
-  width: 300px;
 }
