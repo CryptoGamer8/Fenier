@@ -1,6 +1,10 @@
+// XDong
 import React, { Component } from 'react'
+
 import Homepage from './components/homepage/index'
+
 import Analysis from './components/data_analysis/index'
+
 import Router from './router/index'
 
 import MainCard from './components/reviews/card3'
@@ -25,3 +29,4 @@ function App() {
 };
 
 export default App;
+
