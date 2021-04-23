@@ -1,0 +1,28 @@
+.box{    
+    width: 80%;
+    display: inline-block;
+    padding-left: 50px;
+}
+.user{
+    color: #ff8c69;
+    float: left;
+}
+.rates{
+    color: black;
+    float: right;
+    font-size:medium;
+}
+.score{
+    color: #e6d933;
+    font-size:larger;
+}
+.link-top {
+    width: 115%;
+    height: 1px;
+    border-top: solid #ACC0D8 1px;
+}
+.comments{
+    font-size: large;
+    font-family: cursive;
+    padding-left: 3%;
+}

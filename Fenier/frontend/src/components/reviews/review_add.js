@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import './review_add.css';
 
-export default class AddReview extends Component {
+export default class Addreview extends Component {
 
     constructor() {
         super();
