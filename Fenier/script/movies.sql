@@ -48,7 +48,7 @@ SELECT * FROM (SELECT 4 AS id, "Inception", 2010, "A thief who steals corporate 
  Joseph Gordon-Levitt ... Arthur
  Elliot Page ... Ariadne
  Tom Hardy ... Eames
- Ken Watanabe ... Saito", "Action, Adventure, Thriller", 4 AS rates, "https://www.youtube.com/watch?v=lfe60JYk_Kc", "/imgs/movies/inception.jpg")
+ Ken Watanabe ... Saito", "Action, Adventure, Thriller", 4 AS rates, "https://www.youtube.com/embed/YoHD9XEInc0", "/imgs/movies/inception.jpg")
 AS tmp
 WHERE NOT EXISTS (
 	SELECT id FROM movies_movies WHERE id =4
@@ -62,7 +62,7 @@ SELECT * FROM (SELECT 5 AS id, "The Dark Knight", 2008, "When the menace known a
  Heath Ledger ... Joker
  Aaron Eckhart ... Harvey Dent
  Michael Caine ... 	Alfred
- Maggie Gyllenhaal ... Rachel", "Action, Crime, Drama, Thriller", 9 AS rates, "https://www.youtube.com/watch?v=YYia_OS0tzc", "/imgs/movies/the_dark_knight.jpg")
+ Maggie Gyllenhaal ... Rachel", "Action, Crime, Drama, Thriller", 9 AS rates, "https://www.youtube.com/embed/EXeTwQWrcwY", "/imgs/movies/the_dark_knight.jpg")
 AS tmp
 WHERE NOT EXISTS (
 	SELECT id FROM movies_movies WHERE id =5
@@ -76,7 +76,7 @@ SELECT * FROM (SELECT 6 AS id, "Interstellar", 2014, "A team of explorers travel
  Matthew McConaughey ... Cooper
  Mackenzie Foy ... Murph (10 Yrs.)
  John Lithgow ... Donald
- David Oyelowo ... School Principal", "Adventure, Drama, Sci-Fi", 7 AS rates, "https://www.youtube.com/watch?v=It9-pm9JOSk", "/imgs/movies/interstellar.jpg")
+ David Oyelowo ... School Principal", "Adventure, Drama, Sci-Fi", 7 AS rates, "https://www.youtube.com/embed/zSWdZVtXT7E", "/imgs/movies/interstellar.jpg")
 AS tmp
 WHERE NOT EXISTS (
 	SELECT id FROM movies_movies WHERE id = 6
@@ -89,7 +89,7 @@ SELECT * FROM (SELECT 7 AS id, "The Revenant", 2015, "A frontiersman on a fur tr
  Tom Hardy ... 	John Fitzgerald
  Domhnall Gleeson ... Captain Andrew Henry
  Will Poulter ... Bridger
- Forrest Goodluck ... Hawk", "Action, Adventure, Drama", 8 AS rates, "https://www.youtube.com/watch?v=JLXH25QkOgM", "/imgs/movies/the_revenant.jpg")
+ Forrest Goodluck ... Hawk", "Action, Adventure, Drama", 8 AS rates, "https://www.youtube.com/embed/LoebZZ8K5N0", "/imgs/movies/the_revenant.jpg")
 AS tmp
 WHERE NOT EXISTS (
 	SELECT id FROM movies_movies WHERE id = 7

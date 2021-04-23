@@ -1,9 +1,6 @@
 /* @flow */
 import React, { Component } from 'react'
 import { Row, Col, Rate, Tag } from 'antd'
-import YouTube from 'react-youtube'
-import Utils from '../../../Services/utilsService'
-import Api from '../../../Services/dataService'
 import 'antd/dist/antd.css'
 import './Movie.css'
 
@@ -11,7 +8,7 @@ class MovieLocal extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      id: props.id,
+      id: this.props.match.params.id,
       movie: {
         cast: "",
         genre: "",
