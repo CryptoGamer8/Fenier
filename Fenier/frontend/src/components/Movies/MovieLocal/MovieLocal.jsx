@@ -1,85 +1,58 @@
 /* @flow */
-import React, { Component } from 'react'
-import { Row, Col, Rate, Tag } from 'antd'
-import YouTube from 'react-youtube'
-import axios from 'axios'
-import Utils from '../../../Services/utilsService'
-import Api from '../../../Services/dataService'
-import './Movie.css'
+import React from 'react'
 
-type State = {
-  name: number,
-  description: string,
-  urlImage: string,
-  stars: number,
-  release_date: string,
-  videoURL: string
-}
-
-export default class MovieLocal extends Component <State> {
-
-  getMovieById: (movieId: number) => {
-    const url = `https://127.0.0.1/movie/${movieId}`
-    return axios.get(url).then(info => info.data)
-  }
-
-  constructor (props) {
+class MovieLocal extends React.Component{
+  constructor(props){
     super(props)
-
     this.state = {
-      name: '',
-      description: '',
-      urlImage: '',
-      stars: 0,
-      genres: [],
-      release_date: '',
-      videoId: 0
+      id: props.id,
+      review: {
+        cast: "",
+        genre: "",
+        id: "",
+        img_url:"",
+        movie_url:"",
+        name:"",
+        outline:"",
+        rates:"",
+        reviews_url:"",
+        year:""
+      }
     }
   }
 
-  componentDidMount () {
-    const idFilm = parseInt(this.props.match.params.id, 10)
-    Api.getMovieById(idFilm)
-        .then(data => {
-          console.log('dataApi', data)
-          this.setState({
-            urlImage: data.poster_path,
-            name: data.title,
-            stars: data.vote_average / 2,
-            description: data.overview,
-            genres: (data.genres: Array<number>),
-            release_date: data.release_date,
-            videoId: data.videos.results['0'].key
-          })
-        })
+  componentDidMount(){
+    fetch("http://localhost:8000/movies/id="+this.state.id)
+    .then(res=>res.json())
+    .then(res=>{
+      
+      this.setState({
+        review: res
+      })
+
+      console.log(this.state.review.cast)
+      console.log(this.state.review.genre)
+      console.log(this.state.review.id)
+      console.log(this.state.review.img_url)
+      console.log(this.state.review.movie_url)
+      console.log(this.state.review.name)
+      console.log(this.state.review.outline)
+      console.log(this.state.review.rates)
+      console.log(this.state.review.reviews_url)
+      console.log(this.state.review.year)
+    })
   }
 
-  render () {
+  render() {
     return (
-      <Row>
-        <Col span={8} offset={1}>
-          <img alt={this.state.name} width='85%' src={`https://image.tmdb.org/t/p/w500${this.state.urlImage}`} />
-        </Col>
-        <Col span={12} offset={1}>
-          <h1>{this.state.name}</h1>
-          <hr />
-          <strong> Description: </strong>
-          <p>{this.state.description}</p>
-          <hr />
-          <div className='genere'>
-            <span className='genereTitle'>
-              <strong>Generes: </strong>
-            </span>
-            {this.state.genres.map(genere => <Tag color={Utils.randomColor()} key={genere.id}>{genere.name}</Tag>)}
-          </div>
-          <Rate className='rate' value={this.state.stars} />
-          <hr />
-          <div className='trailer'>
-            <strong> Trailer: </strong>
-          </div>
-          <YouTube videoId={this.state.videoId} />
-        </Col>
-      </Row>
+      <div>
+        {this.state.id}
+      </div>
     )
   }
 }
+
+export default MovieLocal;
+
+
+

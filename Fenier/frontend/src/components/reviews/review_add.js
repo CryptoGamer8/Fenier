@@ -1,15 +1,14 @@
 import React, { Component, useState } from 'react';
 import './review_add.css';
 
-export default class Addreview extends Component {
+export default class AddReview extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            id: '',
             user_name: '',
-            movie_id: '',
-            movie_name: '',
+            movie_id: this.props.match.params.movieid,
+            movie_name: this.props.match.params.moviename,
             rates: '',
             comments: ''
         };
@@ -27,7 +26,6 @@ export default class Addreview extends Component {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    id: this.review_id.value,
                     user_name: this.review_name.value,
                     movie_id: this.review_movieid.value,
                     movie_name: this.review_moviename.value,
@@ -44,29 +42,17 @@ export default class Addreview extends Component {
 
     render() {
         return ( <div>
-           
+            <h2>{this.props.match.params.movieid}</h2>
+            <h2>{this.props.match.params.moviename}</h2>
             <form onSubmit={this.handleSubmit}>
             <table className="addreview" >
             <h2>Add Review</h2>
-              <tr>
-              <th>Reviews ID</th>
-              <td><input ref={(ref) => {this.review_id = ref}} type="text" name="review_id"/></td>
-              </tr>
               
               <tr>
               <th>User Name</th>
               <td><input ref={(ref) => {this.review_name= ref}} type="text" name="review_name" /></td>
               </tr>
     
-              <tr>
-              <th>Movie ID</th>
-              <td><input ref={(ref) => {this.review_movieid= ref}} type="text" name="review_movieid"/></td>
-              </tr>
-    
-              <tr>
-              <th>Movie Name</th>
-              <td><input ref={(ref) => {this.review_moviename= ref}} type="text" name="review_moviename"/></td>
-              </tr>
     
               <tr>
               <th>Rates</th>
