@@ -86,7 +86,7 @@ export default class Newmovie extends React.Component {
                   parts.hotMovies.list.map( (jtem, jndex) => <SwiperSlide key={jndex} ><div data-info={jtem} className="col">
                        {/* onClick={this.detailM.bind(this,jtem)}  */}
                     <img height = "500" width = "500" src={jtem.img_url}  alt="" 
-                      onClick={()=> window.open("/movielocal/"+jtem.id)} />
+                      onClick={()=> window.open("/movie/"+jtem.id)} />
                     <h3>{jtem.name}</h3>
                     <p>{jtem.label}</p>
                     <div className="inf">
@@ -99,7 +99,7 @@ export default class Newmovie extends React.Component {
                 }
             </Swiper>
           </div>
-          <h2 onClick={()=>window.open("/movielist")}>More to Explore &gt;&gt;</h2>
+          <Link to="/movielist"><h2>More to Explore</h2></Link>
           
           <div id="reviews" className="container">
             <h1>Reviews</h1>

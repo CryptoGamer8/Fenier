@@ -62,7 +62,7 @@ class BarChart extends Component {
 
 
 	componentDidMount() {
-		setInterval(this.updateChart, 500);
+		this.updateChart();
 		// console.log(this.state.dataPoints)
 		// for (let index = 0; index < this.state.genres.length; index++) {
 		// 	fetch(https://api.themoviedb.org/3/search/movie?api_key={002f58f23a005b82c32d167ba7872e11}&language=en-US&query=Sony&page=1&include_adult=false)

@@ -1,16 +1,14 @@
 import React, {Component,useState} from 'react';
 import './review_search.css';
 
-
-
-function Reviewsearch(props){ 
+function ReviewSearch(props){ 
 
       const [movie, setMovie] = useState("");
       const [rates, setRates] = useState("");
       const [user, setUser] = useState("");
       const [mycomment, setComment] = useState("");
 
-      fetch("/reviews/id=2", {
+      fetch("/reviews/id=1", {
         method: 'GET',
         headers: {
         'Content-Type': 'application/json' 
@@ -25,10 +23,8 @@ function Reviewsearch(props){
          }
        ).catch(err=>console.log(err))
  
- 
    return (
     <div className="review_table">
-
        <tr>
          <th>Movie Name</th>
          <th>Rates</th>
@@ -41,10 +37,9 @@ function Reviewsearch(props){
          <td>{user}</td>
          <td>{mycomment}</td>  
        </tr>
-
     </div>
      
    );
 } 
 
-export default Reviewsearch;
+export default ReviewSearch;
