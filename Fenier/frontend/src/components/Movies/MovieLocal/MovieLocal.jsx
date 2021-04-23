@@ -1,5 +1,10 @@
 /* @flow */
-import React from 'react'
+import React, { Component } from 'react'
+import { Row, Col, Rate, Tag } from 'antd'
+import YouTube from 'react-youtube'
+import Utils from '../../../Services/utilsService'
+import Api from '../../../Services/dataService'
+import './Movie.css'
 
 class MovieLocal extends React.Component{
   constructor(props){
@@ -7,30 +12,33 @@ class MovieLocal extends React.Component{
     this.state = {
       id: props.id,
       review: {
-        cast: "",
         genre: "",
-        id: "",
-        img_url:"",
+        urlImage:"",
         movie_url:"",
         name:"",
-        outline:"",
-        rates:"",
-        reviews_url:"",
-        year:""
+        description:"",
+        stars:"",
+        // reviews_url:"",
+        release_date:""
       }
     }
   }
-
+  
   componentDidMount(){
     fetch("http://localhost:8000/movies/id="+this.state.id)
     .then(res=>res.json())
     .then(res=>{
-      
       this.setState({
+        urlImage: res.img_url,
+        name: res.name,
+        stars: res.rates,
+        description: res.outline,
+        genre: (res.genre: Array<number>),
+        release_date: res.year,
+        movie_url: res.movie_url
         review: res
       })
 
-      console.log(this.state.review.cast)
       console.log(this.state.review.genre)
       console.log(this.state.review.id)
       console.log(this.state.review.img_url)
@@ -44,15 +52,41 @@ class MovieLocal extends React.Component{
   }
 
   render() {
+    // return (
+    //   <div>
+    //     {this.state.id}
+    //   </div>
+    // )
     return (
-      <div>
-        {this.state.id}
-      </div>
+      <Row>
+        <Col span={8} offset={1}>
+          <img alt={this.state.review.name} width='85%' src= {this.state.review.urlImage}/>
+        </Col>
+        <Col span={12} offset={1}>
+          <h1>{this.state.review.name}</h1>
+          <hr />
+          <strong>release year</strong>
+          <h3>{this.state.review.release_date}
+          <hr />
+          <strong> Description: </strong>
+          <p>{this.state.review.description}</p>
+          <hr />
+          <div className='genere'>
+            <span className='genereTitle'>
+              <strong>Generes: </strong>
+            </span>
+            {this.state.review.genre.map(genere => <Tag color={Utils.randomColor()} key={genere.id}>{genere.name}</Tag>)}
+          </div>
+          <Rate className='rate' value={this.state.review.stars} />
+          <hr />
+          <div className='trailer'>
+            <strong> Trailer: </strong>
+          </div>
+          <YouTube movie_url={this.state.review.movie_url} />
+        </Col>
+      </Row>
     )
   }
 }
 
 export default MovieLocal;
-
-
-
