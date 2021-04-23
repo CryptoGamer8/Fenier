@@ -5,4 +5,4 @@ virtual
 Fenier/frontend/node_modules
 .vscode
 *.pyc
-**/Fenier/settings.py
+Fenier/Fenier/settings.py
