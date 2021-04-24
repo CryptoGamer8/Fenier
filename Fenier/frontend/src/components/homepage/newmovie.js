@@ -7,7 +7,6 @@ import 'swiper/components/navigation/navigation.scss';
 import Front from './front';
 import HomeAnalysis from './data_analysis'
 import HomeReviews from './homereviews'
-import {Link} from 'react-router-dom'
 
 SwiperCore.use([Navigation, A11y]);
 
