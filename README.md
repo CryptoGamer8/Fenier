@@ -32,9 +32,29 @@ mySQL
    python manage.py runserver
    ```
 
-   
+## Presentation
+![Movie list](./imgs/Movie_list.png)
 
 
 
+![Movie](./imgs/Movie.png)
 
 
+
+![Review](./imgs/Review.png)
+
+
+
+![Statistics](./imgs/Statistics.png)
+
+
+
+![Admin](./imgs/Admin.png)
+
+
+
+![Admin movie](./imgs/Admin_movie.png)
+
+
+
+Youtube Link: https://www.youtube.com/watch?v=eyR5JNcHblo
