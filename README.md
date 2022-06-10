@@ -5,7 +5,7 @@ Movie Website
 
 ReactJS
 
-Django
+Django 
 
 mySQL
 
@@ -57,4 +57,4 @@ mySQL
 
 
 
-Youtube Link: https://www.youtube.com/watch?v=eyR5JNcHblo
+Youtube Link: https://www.youtube.com/watch?v=eyR5JNcHblo 
