@@ -26,20 +26,20 @@ function HomeAnalysis() {
       setyear(e.value);
     };
   
-    return (
-      <div>
-        <Select
-          options={options}
-          onChange={handleTypeSelect}
-          value={options.filter(function (option) {
-            return option.value === year;
-          })}
-          label="Single select"
-        />
-  
-          <Analysis year={year}/>
-      </div>
-    );
+      return (
+        <div>
+          <Select
+            options={options}
+            onChange={handleTypeSelect}
+            value={options.filter(function (option) {
+              return option.value === year;
+            })}
+            label="Single select"
+          />
+    
+            <Analysis year={year}/>
+        </div>
+      );
 }
 
 export default HomeAnalysis

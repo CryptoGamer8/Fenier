@@ -7,12 +7,14 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Newmovie from './newmovie';
 
+
 ReactDOM.render(
   <Router>
-      <Switch>
-        <Route exact path="/" component={Newmovie}/>
-        <Route path="/detail" component={Detail}/>
-      </Switch>
+
+        <Switch>
+          <Route exact path="/" component={Newmovie}/>
+          <Route path="/detail" component={Detail}/>
+        </Switch>
   </Router>,
   document.getElementById('root')
 );
